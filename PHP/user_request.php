@@ -2,10 +2,10 @@
     try {
         // connection to the database.
         $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
-        $bdd = new PDO('mysql:host=localhost;dbname=xia', 'root', '', $pdo_options);
+        $bdd = new PDO('mysql:host=localhost;dbname=XIA', 'XIA', 'westworld211116', $pdo_options);
 
         // Execute SQL request on the database.
-        $sql = 'SELECT * FROM produits where localisation_id = ' . $_GET['loc'] . ';';
+        $sql = 'SELECT * FROM utilisateurs;';
         $response = $bdd->query($sql);
         $output = $response->fetchAll(PDO::FETCH_ASSOC);
     } catch (Exception $e) {
